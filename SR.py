@@ -52,7 +52,7 @@ class SRDefenseWrapper(nn.Module):
         self.pool         = nn.AdaptiveAvgPool2d(1)
         self.dx           = dx
         self.dy           = dy
-        self.patch_size   = 8
+        self.patch_size   = 16
         self.patch_pixels = self.patch_size ** 2
 
     def _sr_forward(self, x):
