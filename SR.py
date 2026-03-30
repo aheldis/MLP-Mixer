@@ -39,7 +39,7 @@ EPSILONS  = [2/255, 4/255, 8/255]   # three columns per attack type
 
 # SR resonance levels to sweep (paper uses 0-3, where level = max shift in px)
 # SR_LEVELS = [0, 1, 2, 3]
-SR_LEVELS = [2, 3]
+SR_LEVELS = [3]
 
 # -------------------------------------------------------
 # SR Defense Wrapper  (identical to training script)
