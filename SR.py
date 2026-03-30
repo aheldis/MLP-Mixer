@@ -25,7 +25,7 @@ _args, _ = _parser.parse_known_args()
 # -------------------------------------------------------
 MODEL_NAME      = "mixer_b16_224.goog_in21k_ft_in1k"
 NUM_CLASSES     = 10
-BATCH_SIZE      = 8        # SR level 3 = 49x batch — keep this small
+BATCH_SIZE      = 4        # SR level 3 = 49x batch — keep this small
 NUM_WORKERS     = 0
 PIN_MEMORY      = False
 DEVICE          = "cuda" if torch.cuda.is_available() else "cpu"
