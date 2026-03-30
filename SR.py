@@ -25,7 +25,7 @@ _args, _ = _parser.parse_known_args()
 # -------------------------------------------------------
 MODEL_NAME      = "mixer_b16_224.goog_in21k_ft_in1k"
 NUM_CLASSES     = 10
-BATCH_SIZE      = 16        # SR level 3 = 49x batch — keep this small
+BATCH_SIZE      = 8        # SR level 3 = 49x batch — keep this small
 NUM_WORKERS     = 0
 PIN_MEMORY      = False
 DEVICE          = "cuda" if torch.cuda.is_available() else "cpu"
@@ -38,8 +38,8 @@ PGD_STEPS = 20
 EPSILONS  = [2/255, 4/255, 8/255]   # three columns per attack type
 
 # SR resonance levels to sweep (paper uses 0-3, where level = max shift in px)
-SR_LEVELS = [0, 1, 2, 3]
-
+# SR_LEVELS = [0, 1, 2, 3]
+SR_LEVELS = [2, 3]
 
 # -------------------------------------------------------
 # SR Defense Wrapper  (identical to training script)
